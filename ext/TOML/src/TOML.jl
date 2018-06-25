@@ -1,9 +1,5 @@
 module TOML
 
-    if VERSION < v"0.6-"
-        eachline(args...; chomp=false) = (@assert !chomp; Base.eachline(args...))
-    end
-
     include("parser.jl")
     include("print.jl")
 
